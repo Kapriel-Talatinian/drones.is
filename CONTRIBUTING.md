@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping build the autonomous seed-planting drone. We simulate a real workflow so the history feels authentic and attributable to the whole group.
+Thank you for helping build the autonomous seed-planting drone. We simulate a real workflow.
 
 ## Branching and forks
 - Work from the `dev` branch; create focused `feature/*`, `fix/*`, or `chore/*` branches per task.
