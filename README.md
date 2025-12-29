@@ -22,9 +22,15 @@ Autonomous AI-driven drone platform for precision seed planting on agricultural 
 1. Clone the repository and check out `dev` for day-to-day development.
 2. Create a `feature/<short-name>` branch off `dev` for each task.
 3. Add tests for new modules, run CI locally, and open a PR for review.
+4. Use your edu.ece.fr identity (e.g., `name-surname@edu.ece.fr`) when committing to keep authorship consistent.
+
+## Development & Testing
+- Fork-first contributions are welcome; open pull requests from your fork or local `feature/*` branch into `dev`.
+- CI runs `python -m unittest` today and will add linting, typing (mypy), and coverage upload as the codebase grows.
+- Prefer small, reviewable PRs with at least one teammate approval before merging into `dev` and subsequently `main`.
 
 ## Contributors
-- Flavio Tauzin — mission planning & UX
-- Ching Jui Lin — perception & ML pipeline
-- Jaehwi Yoo — navigation & guidance
-- Kapriel Talatinian — platform integration & tooling
+- Flavio Tauzin — mission planning & UX — flavio-tauzin@edu.ece.fr
+- Ching Jui Lin — perception & ML pipeline — chingjui-lin@edu.ece.fr
+- Jaehwi Yoo — navigation & guidance — jaehwi-yoo@edu.ece.fr
+- Kapriel Talatinian — platform integration & tooling — kapriel-talatinian@edu.ece.fr

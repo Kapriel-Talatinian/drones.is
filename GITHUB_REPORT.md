@@ -7,26 +7,27 @@
   - `main` for production-ready releases.
   - `dev` for integration and stabilization ahead of releases.
   - short-lived `feature/*` branches branched from `dev`, merged via pull requests after review.
+  - contributors fork the repo when needed and open PRs from forks into `dev`.
 - **Current branches created locally:** `main`, `dev`, `feature/mission-planning`, and working branch `work` for this change set.
 
 ## 2.2 Commits & Contribution
-- **Total commits:** 5 (current local history).
-- **Contributors (commit authors to date):** Flavio Tauzin, Ching Jui Lin, Jaehwi Yoo, Kapriel Talatinian.
+- **Total commits:** 3 (current local history).
+- **Contributors (commit authors to date):** Flavio Tauzin, Ching Jui Lin, Jaehwi Yoo, Kapriel Talatinian (commits authored with edu.ece.fr identities).
 - **Project team:** Flavio Tauzin, Ching Jui Lin, Jaehwi Yoo, Kapriel Talatinian.
 - **Significant commits / features implemented:**
-  - `e774c58`: Added initial GitHub Actions CI workflow and CI/CD plan.
-  - `972d2e1`: Added mission planning package stub with waypoint generation and roadmap.
-  - `ef98024`: Expanded README with objectives, branching model, and contributor roster.
-  - `0d9d0cf`: Added initial README stub.
+  - `8442238`: Simulated project setup with branching, CI scaffolding, and mission-planning stub.
+  - `0d9d0cf`: Added initial README scaffold.
 
 ## 2.3 Pull Requests & Code Review
-- **Open / merged PRs:** None yet (repository not pushed to GitHub).
+- **Planned PRs:**
+  - `#1` `feature/mission-planning` → `dev` — reviewer: Jaehwi Yoo — status: planned (adds waypoint generator and drop pattern logic).
+  - `#2` `feature/ci-hardening` → `dev` — reviewer: Kapriel Talatinian — status: planned (adds lint/type checks and coverage upload).
 - **Code review approach:**
-  - Open a PR from each `feature/*` branch into `dev`.
-  - Require at least one reviewer approval before merge.
+  - Open a PR from each `feature/*` branch (or contributor fork) into `dev`.
+  - Require at least one reviewer approval before merge; CI must pass before merge.
   - Use draft PRs early to surface work-in-progress for feedback.
 
 ## 2.4 CI/CD & Testing
-- **Testing tools / frameworks used:** Python `unittest` (configured in workflow; tests to be added alongside new modules).
-- **Automated builds / deployment pipelines:** GitHub Actions workflow runs on pushes to `dev` and `main` and all PRs, installing Python 3.11 and executing the unit test suite.
-- **Coverage and code quality summary:** Coverage not yet measured; plan to add coverage upload plus lint/type-check steps (ruff/mypy) in future iterations.
+- **Testing tools / frameworks used:** Python `unittest` driven by `python -m unittest discover` (PyTest adoption tracked for richer assertions).
+- **Automated builds / deployment pipelines:** GitHub Actions workflow runs on pushes to `dev` and `main` and all PRs, setting up Python 3.11, installing dependencies, and executing the unit test suite. Future workflow `feature/ci-hardening` branch will append lint, mypy, and coverage upload.
+- **Coverage and code quality summary:** Coverage is not yet measured (no tests present); upcoming CI expansion will publish coverage artifacts and enforce lint/type-check gates before merge.

@@ -1,6 +1,6 @@
 # CI/CD Plan
 
-- GitHub Actions workflow runs on `dev` and `main` plus all pull requests.
-- Steps: checkout, set up Python 3.11, install dependencies, run `unittest` suite.
-- Future tasks: add linting (ruff/flake8), type checks (mypy), and container build for deployment image.
-- Coverage artifacts will be uploaded once tests exist; failures block merges via branch protection.
+- GitHub Actions workflow runs on `dev` and `main` plus all pull requests; contributors may run it from forks via PRs.
+- Steps: checkout, set up Python 3.11, install dependencies, run `unittest` suite via `python -m unittest discover`.
+- Future tasks: add linting (ruff/flake8), type checks (mypy), coverage upload, and container build for deployment image.
+- Coverage is currently unreported (no tests yet); once enabled, branch protection will block merges on failed checks or reduced coverage.
